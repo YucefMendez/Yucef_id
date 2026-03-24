@@ -1,7 +1,9 @@
 "use client";
 
 import type { ReactElement } from "react";
+import { motion } from "framer-motion";
 import { skillCategories } from "@/lib/data";
+import { useLang } from "@/context/LanguageContext";
 
 const iconMap: Record<string, ReactElement> = {
   code: (
@@ -44,45 +46,73 @@ const iconMap: Record<string, ReactElement> = {
   ),
 };
 
+const container = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.07 } },
+};
+const card = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
 export default function Skills() {
+  const { t } = useLang();
+  const { skills } = t;
+
   return (
-    <section id="skills" className="py-24 relative">
-      {/* Subtle divider glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-accent/30 to-transparent" />
+    <section id="skills" className="py-28 relative">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-20 bg-gradient-to-b from-transparent via-accent/25 to-transparent" />
 
       <div className="max-w-6xl mx-auto section-padding">
-        <div className="text-center mb-16">
-          <p className="font-mono text-sm text-accent mb-3 tracking-widest uppercase">02 / Skills</p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <p className="text-xs font-semibold text-accent mb-3 tracking-[0.2em] uppercase">{skills.section}</p>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-100">
-            Technical <span className="text-gradient">toolkit</span>
+            {skills.heading} <span className="text-gradient">{skills.headingGradient}</span>
           </h2>
-          <p className="mt-4 text-slate-500 max-w-lg mx-auto">
-            The disciplines and tools I work with across the full mechatronics stack.
+          <p className="mt-4 text-slate-500 max-w-md mx-auto text-sm leading-relaxed">
+            {skills.subtitle}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {skillCategories.map((cat) => (
-            <div key={cat.label} className="glass glass-hover rounded-xl p-6">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-40px" }}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+        >
+          {skillCategories.map((cat, i) => (
+            <motion.div
+              key={cat.icon}
+              variants={card}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="glass rounded-xl p-6 cursor-default"
+            >
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
                   {iconMap[cat.icon]}
                 </div>
-                <h3 className="font-semibold text-slate-200">{cat.label}</h3>
+                <h3 className="font-semibold text-slate-200 text-sm">{skills.categories[i]}</h3>
               </div>
               <ul className="flex flex-wrap gap-2">
                 {cat.skills.map((skill) => (
                   <li
                     key={skill}
-                    className="px-3 py-1 text-xs rounded-full bg-white/5 text-slate-400 border border-white/10 font-mono"
+                    className="px-3 py-1 text-xs rounded-full bg-white/5 text-slate-400 border border-white/10"
                   >
                     {skill}
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

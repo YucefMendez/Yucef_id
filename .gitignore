@@ -29,3 +29,17 @@ yarn-error.log*
 # OS
 .DS_Store
 Thumbs.db
+
+# Codex local configuration
+.codex/
+
+# Claude Flow runtime data
+.claude-flow/data/
+.claude-flow/logs/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+.vercel
