@@ -187,8 +187,8 @@ export const translations = {
       emailBtn: "Escríbeme",
       stats: [
         { value: "5+", label: "Años en TI" },
-        { value: "2", label: "Co-ops Internacionales" },
-        { value: "97%", label: "Precisión del Modelo" },
+        { value: "2", label: "Co-ops Intl." },
+        { value: "97%", label: "Prec. del Modelo" },
       ],
       quote:
         "De drivers robóticos de 20 kV a modelos de trading con IA — construyo sistemas que operan al límite.",

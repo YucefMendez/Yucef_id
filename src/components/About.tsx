@@ -87,7 +87,7 @@ export default function About() {
               {about.stats.map(({ value, label }) => (
                 <div key={label} className="glass glass-hover rounded-xl p-4 text-center">
                   <div className="text-xl font-bold text-accent mb-0.5">{value}</div>
-                  <div className="text-[11px] text-slate-500 font-medium uppercase tracking-wide leading-tight">{label}</div>
+                  <div className="text-[10px] text-slate-500 font-medium leading-tight break-words hyphens-auto">{label}</div>
                 </div>
               ))}
             </div>

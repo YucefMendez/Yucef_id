@@ -81,7 +81,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="h-9 flex items-center mb-6"
+            className="min-h-[2.25rem] flex items-center mb-6"
           >
             <span className="text-xl md:text-2xl text-slate-300 font-light tracking-wide">
               {displayed}

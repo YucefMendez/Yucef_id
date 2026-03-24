@@ -94,11 +94,11 @@ export default function Skills() {
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
               className="glass rounded-xl p-6 cursor-default"
             >
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
+              <div className="flex items-start gap-3 mb-5">
+                <div className="w-9 h-9 shrink-0 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
                   {iconMap[cat.icon]}
                 </div>
-                <h3 className="font-semibold text-slate-200 text-sm">{skills.categories[i]}</h3>
+                <h3 className="font-semibold text-slate-200 text-sm leading-snug pt-1">{skills.categories[i]}</h3>
               </div>
               <ul className="flex flex-wrap gap-2">
                 {cat.skills.map((skill) => (

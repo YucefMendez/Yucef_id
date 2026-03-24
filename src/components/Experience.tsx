@@ -38,8 +38,8 @@ export default function Experience() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Work experience */}
           <div>
-            <h3 className="flex items-center gap-2 text-xs font-semibold text-slate-500 uppercase tracking-[0.18em] mb-6">
-              <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <h3 className="flex items-center gap-2 text-xs font-semibold text-slate-500 uppercase tracking-[0.18em] mb-6 flex-wrap">
+              <svg className="w-4 h-4 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <rect x="2" y="7" width="20" height="14" rx="2" />
                 <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
               </svg>
@@ -92,8 +92,8 @@ export default function Experience() {
 
           {/* Education */}
           <div>
-            <h3 className="flex items-center gap-2 text-xs font-semibold text-slate-500 uppercase tracking-[0.18em] mb-6">
-              <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <h3 className="flex items-center gap-2 text-xs font-semibold text-slate-500 uppercase tracking-[0.18em] mb-6 flex-wrap">
+              <svg className="w-4 h-4 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
                 <path d="M6 12v5c3 3 9 3 12 0v-5" />
               </svg>

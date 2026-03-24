@@ -66,7 +66,7 @@ export default function Navigation() {
         </a>
 
         {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-5 lg:gap-7">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
               <a
