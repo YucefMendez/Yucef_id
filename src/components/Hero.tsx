@@ -1,13 +1,17 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { siteConfig } from "@/lib/data";
 import { useLang } from "@/context/LanguageContext";
 
 export default function Hero() {
   const { t } = useLang();
   const roles = t.hero.roles as readonly string[];
+  const { scrollY } = useScroll();
+  const glowY = useTransform(scrollY, [0, 600], [0, -80]);
+  const contentOpacity = useTransform(scrollY, [0, 400], [1, 0.3]);
 
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
@@ -44,13 +48,14 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
       {/* Warm ambient glow */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <motion.div style={{ y: glowY }} className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-accent/[0.07] blur-[140px]" />
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-accent/[0.04] blur-[120px]" />
-      </div>
+      </motion.div>
 
-      <div className="relative z-10 max-w-6xl mx-auto section-padding pt-32 pb-24">
-        <div className="max-w-3xl">
+      <motion.div style={{ opacity: contentOpacity }} className="relative z-10 max-w-6xl mx-auto section-padding pt-32 pb-24">
+        <div className="flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-20">
+          <div className="flex-1 max-w-2xl">
 
           {/* Available badge */}
           {siteConfig.availableForWork && (
@@ -141,8 +146,29 @@ export default function Hero() {
             </svg>
             {siteConfig.location}
           </motion.p>
+          </div>
+
+          {/* Profile photo — desktop */}
+          <motion.div
+            initial={{ opacity: 0, x: 32 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="hidden lg:block shrink-0"
+          >
+            <div className="relative w-64 xl:w-72 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-accent/20">
+              <Image
+                src="/profile.jpg"
+                alt={siteConfig.name}
+                fill
+                className="object-cover object-top"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-warm-950/40 to-transparent" />
+            </div>
+          </motion.div>
+
         </div>
-      </div>
+      </motion.div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">

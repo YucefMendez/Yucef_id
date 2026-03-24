@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { motion, useScroll } from "framer-motion";
 import { siteConfig } from "@/lib/data";
 import { useLang } from "@/context/LanguageContext";
 
 export default function Navigation() {
+  const { scrollYProgress } = useScroll();
   const { lang, setLang, t } = useLang();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -54,6 +56,10 @@ export default function Navigation() {
         scrolled ? "glass shadow-lg shadow-black/20" : "bg-transparent"
       }`}
     >
+      <motion.div
+        style={{ scaleX: scrollYProgress }}
+        className="absolute top-0 left-0 right-0 h-[2px] bg-accent origin-left z-10"
+      />
       <nav className="max-w-6xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
         {/* Logo */}
         <a
@@ -81,6 +87,20 @@ export default function Navigation() {
               </a>
             </li>
           ))}
+
+          {/* Command palette hint */}
+          <li>
+            <button
+              onClick={() => {
+                const event = new KeyboardEvent("keydown", { key: "k", metaKey: true, bubbles: true });
+                window.dispatchEvent(event);
+              }}
+              className="hidden lg:flex items-center gap-1 text-[10px] font-mono text-slate-600 hover:text-accent/60 transition-colors"
+              aria-label="Open command palette"
+            >
+              <kbd className="px-1.5 py-0.5 rounded border border-slate-700 bg-white/5">⌘K</kbd>
+            </button>
+          </li>
 
           {/* Language toggle */}
           <li>

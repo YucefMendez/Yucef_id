@@ -87,8 +87,11 @@ function ProjectCard({
     <motion.div
       variants={card}
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
-      className={`glass rounded-xl p-6 flex flex-col gap-4 ${featured ? "border-accent/20" : ""}`}
+      className={`glass rounded-xl p-6 flex flex-col gap-4 relative overflow-hidden ${featured ? "border-accent/30" : ""}`}
     >
+      {featured && (
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent" />
+      )}
       <div className="flex items-start justify-between gap-4">
         <div>
           <span className={`inline-block px-2.5 py-0.5 text-[10px] font-semibold rounded-full border mb-2 ${statusStyles[project.status]}`}>
