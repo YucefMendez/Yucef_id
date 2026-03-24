@@ -15,9 +15,9 @@ export const siteConfig = {
 };
 
 export const aboutText = [
-  "I am a Mechatronic Engineering student at UTEC with hands-on experience spanning chip design, embedded systems, IT infrastructure, and AI-driven prediction models. My work bridges the physical and digital worlds — from designing 20 kV high-voltage drivers for soft robotics to building FPGA-based SoC applications and long-range IoT networks.",
+  "I am a Mechatronic Engineer (UTEC, Feb 2026) with hands-on experience spanning chip design, embedded systems, IT infrastructure, and AI-driven prediction models. My work bridges the physical and digital worlds — from designing 20 kV high-voltage drivers for soft robotics to building FPGA-based SoC applications and long-range IoT networks.",
   "I thrive in multidisciplinary environments and absorb new domains quickly, whether it is SystemVerilog for RTL design in Canada or Python and Kalman Filters for financial modelling. I care about precision, reliability, and pushing systems to their limits.",
-  "Currently co-founding Quadro while finishing my degree at UTEC (graduating February 2026), and actively looking for opportunities where rigorous engineering meets real-world innovation.",
+  "Currently serving as CTO at Quadro — an art marketplace where I build the full website framework and platform tools — and pursuing my engineering license in 2026, while actively looking for opportunities where rigorous engineering meets real-world innovation.",
 ];
 
 // ─── SKILLS ───────────────────────────────────────────────────────────────────
@@ -112,15 +112,15 @@ export const projects = [
 export const experience = [
   {
     id: 1,
-    role: "Co-Founder",
+    role: "CTO",
     company: "Quadro",
     period: "Aug 2025 – Present",
     location: "Lima, Peru",
     description: [
-      "Co-founded a technology venture focused on engineering-driven product solutions.",
-      "Leading product direction, technical architecture, and business development strategy.",
+      "Building the full technical framework for an art marketplace — from website architecture to the platform tools available to buyers and sellers.",
+      "Own the entire stack end-to-end: frontend, backend, integrations, and product tooling.",
     ],
-    tags: ["Entrepreneurship", "Product Design", "Engineering"],
+    tags: ["Art Marketplace", "Full-Stack", "Platform Architecture"],
   },
   {
     id: 2,
@@ -165,10 +165,10 @@ export const experience = [
 export const education = [
   {
     id: 1,
-    degree: "B.Sc. Mechatronic Engineering",
+    degree: "B.Sc. Mechatronic Engineering — pursuing License (2026)",
     institution: "UTEC — Universidad de Ingeniería y Tecnología",
-    period: "Jan 2019 – Feb 2026",
-    description: "Comprehensive engineering programme covering robotics, control systems, embedded electronics, mechanical design, and intelligent systems. Thesis on high-voltage power electronics for HASEL actuator-driven soft robots.",
+    period: "Jan 2019 – Present",
+    description: "Comprehensive engineering programme covering robotics, control systems, embedded electronics, mechanical design, and intelligent systems. Graduated February 2026; currently pursuing engineering license. Thesis on high-voltage power electronics for HASEL actuator-driven soft robots.",
     tags: ["Robotics", "Control Systems", "Embedded Systems", "Power Electronics", "FPGA"],
   },
 ];

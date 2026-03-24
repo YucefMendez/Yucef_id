@@ -16,7 +16,7 @@ export const translations = {
       available: "Available for new roles",
       roles: [
         "Mechatronic Engineer",
-        "Co-Founder @ Quadro",
+        "CTO @ Quadro",
         "Hardware Systems Designer",
         "Embedded AI Developer",
       ],
@@ -30,9 +30,9 @@ export const translations = {
       heading: "The engineer",
       headingGradient: "behind the work",
       paragraphs: [
-        "I am a Mechatronic Engineering student at UTEC with hands-on experience spanning chip design, embedded systems, IT infrastructure, and AI-driven prediction models. My work bridges the physical and digital worlds — from designing 20 kV high-voltage drivers for soft robotics to building FPGA-based SoC applications and long-range IoT networks.",
+        "I am a Mechatronic Engineer (UTEC, Feb 2026) with hands-on experience spanning chip design, embedded systems, IT infrastructure, and AI-driven prediction models. My work bridges the physical and digital worlds — from designing 20 kV high-voltage drivers for soft robotics to building FPGA-based SoC applications and long-range IoT networks.",
         "I thrive in multidisciplinary environments and absorb new domains quickly, whether it is SystemVerilog for RTL design in Canada or Python and Kalman Filters for financial modelling. I care about precision, reliability, and pushing systems to their limits.",
-        "Currently co-founding Quadro while finishing my degree at UTEC (graduating February 2026), and actively looking for opportunities where rigorous engineering meets real-world innovation.",
+        "Currently serving as CTO at Quadro — an art marketplace where I build the full website framework and platform tools — and pursuing my engineering license in 2026, while actively looking for opportunities where rigorous engineering meets real-world innovation.",
       ],
       emailBtn: "Email me",
       stats: [
@@ -109,8 +109,8 @@ export const translations = {
       items: [
         {
           description: [
-            "Co-founded a technology venture focused on engineering-driven product solutions.",
-            "Leading product direction, technical architecture, and business development strategy.",
+            "Building the full technical framework for an art marketplace — from website architecture to the platform tools available to buyers and sellers.",
+            "Own the entire stack end-to-end: frontend, backend, integrations, and product tooling.",
           ],
         },
         {
@@ -135,9 +135,9 @@ export const translations = {
       ],
       education: [
         {
-          degree: "B.Sc. Mechatronic Engineering",
+          degree: "B.Sc. Mechatronic Engineering — pursuing License (2026)",
           description:
-            "Comprehensive engineering programme covering robotics, control systems, embedded electronics, mechanical design, and intelligent systems. Thesis on high-voltage power electronics for HASEL actuator-driven soft robots.",
+            "Comprehensive engineering programme covering robotics, control systems, embedded electronics, mechanical design, and intelligent systems. Graduated February 2026; currently pursuing engineering license. Thesis on high-voltage power electronics for HASEL actuator-driven soft robots.",
         },
       ],
     },
@@ -166,7 +166,7 @@ export const translations = {
       available: "Disponible para nuevas oportunidades",
       roles: [
         "Ingeniero Mecatrónico",
-        "Co-Fundador @ Quadro",
+        "CTO @ Quadro",
         "Diseñador de Hardware",
         "Desarrollador de IA Embebida",
       ],
@@ -180,9 +180,9 @@ export const translations = {
       heading: "El ingeniero",
       headingGradient: "detrás del trabajo",
       paragraphs: [
-        "Soy estudiante de Ingeniería Mecatrónica en UTEC con experiencia práctica en diseño de chips, sistemas embebidos, infraestructura TI y modelos de predicción con IA. Mi trabajo conecta el mundo físico y el digital — desde diseñar drivers de alto voltaje de 20 kV para robótica blanda hasta construir aplicaciones SoC en FPGA y redes IoT de largo alcance.",
+        "Soy Ingeniero Mecatrónico egresado de UTEC (feb. 2026) con experiencia práctica en diseño de chips, sistemas embebidos, infraestructura TI y modelos de predicción con IA. Mi trabajo conecta el mundo físico y el digital — desde diseñar drivers de alto voltaje de 20 kV para robótica blanda hasta construir aplicaciones SoC en FPGA y redes IoT de largo alcance.",
         "Me desenvuelvo bien en entornos multidisciplinarios y absorbo nuevos dominios con rapidez, ya sea SystemVerilog para diseño RTL en Canadá o Python con Filtros de Kalman para modelos financieros. Me importa la precisión, la confiabilidad y llevar los sistemas al límite.",
-        "Actualmente co-fundando Quadro mientras termino mi carrera en UTEC (graduándome en febrero 2026), y buscando activamente oportunidades donde la ingeniería rigurosa se encuentre con la innovación real.",
+        "Actualmente como CTO en Quadro — un marketplace de arte donde construyo el framework del sitio web y las herramientas de la plataforma — obteniendo mi licenciatura en 2026, y buscando activamente oportunidades donde la ingeniería rigurosa se encuentre con la innovación real.",
       ],
       emailBtn: "Escríbeme",
       stats: [
@@ -259,8 +259,8 @@ export const translations = {
       items: [
         {
           description: [
-            "Co-fundé una empresa tecnológica enfocada en soluciones de productos basadas en ingeniería.",
-            "Lidero la dirección del producto, la arquitectura técnica y la estrategia de desarrollo de negocio.",
+            "Construyo el framework técnico completo de un marketplace de arte — desde la arquitectura del sitio hasta las herramientas de la plataforma para compradores y vendedores.",
+            "Dueño del stack completo de extremo a extremo: frontend, backend, integraciones y herramientas del producto.",
           ],
         },
         {
@@ -285,9 +285,9 @@ export const translations = {
       ],
       education: [
         {
-          degree: "Licenciatura en Ingeniería Mecatrónica",
+          degree: "Ing. Mecatrónico — en proceso de Licenciatura (2026)",
           description:
-            "Programa integral de ingeniería que cubre robótica, sistemas de control, electrónica embebida, diseño mecánico y sistemas inteligentes. Tesis sobre electrónica de potencia de alto voltaje para robots blandos con actuadores HASEL.",
+            "Programa integral de ingeniería que cubre robótica, sistemas de control, electrónica embebida, diseño mecánico y sistemas inteligentes. Egresado en febrero 2026; actualmente en proceso de licenciatura. Tesis sobre electrónica de potencia de alto voltaje para robots blandos con actuadores HASEL.",
         },
       ],
     },
