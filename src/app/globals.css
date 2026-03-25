@@ -15,16 +15,16 @@ body {
 }
 
 .dark body {
-  background: #141210;
-  background-image: radial-gradient(rgba(196,163,90,0.035) 1px, transparent 1px);
+  background: #0D0A07;
+  background-image: radial-gradient(rgba(196,163,90,0.03) 1px, transparent 1px);
   background-size: 28px 28px;
   color: #F0EBE0;
 }
 
-::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(196,163,90,0.4); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(196,163,90,0.65); }
+::-webkit-scrollbar-thumb { background: rgba(196,163,90,0.35); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(196,163,90,0.6); }
 
 ::selection { background: rgba(196,163,90,0.2); color: #8B6914; }
 .dark ::selection { color: #D4B46A; }
@@ -43,7 +43,6 @@ body {
     background-clip: text;
   }
 
-  /* Elegant card — warm */
   .glass {
     background: rgba(255, 252, 244, 0.90);
     backdrop-filter: blur(16px);
@@ -52,9 +51,9 @@ body {
     box-shadow: 0 2px 16px rgba(0,0,0,0.05);
   }
   .dark .glass {
-    background: rgba(26, 22, 14, 0.78);
-    border: 1px solid rgba(196,163,90,0.13);
-    box-shadow: 0 2px 16px rgba(0,0,0,0.35);
+    background: rgba(20, 16, 10, 0.82);
+    border: 1px solid rgba(196,163,90,0.10);
+    box-shadow: 0 2px 24px rgba(0,0,0,0.45);
   }
 
   .glass-hover { transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease; }
@@ -63,14 +62,116 @@ body {
     box-shadow: 0 8px 32px rgba(196,163,90,0.1);
   }
   .dark .glass-hover:hover {
-    border-color: rgba(196,163,90,0.3);
-    box-shadow: 0 8px 32px rgba(196,163,90,0.08);
+    border-color: rgba(196,163,90,0.28);
+    box-shadow: 0 8px 36px rgba(196,163,90,0.08);
   }
 
   .section-padding { @apply px-6 md:px-12 lg:px-24 xl:px-32; }
 
   .glow-text {
     text-shadow: 0 0 20px rgba(196,163,90,0.55), 0 0 40px rgba(196,163,90,0.18);
+  }
+
+  /* Engineering grid overlay */
+  .engineering-grid {
+    background-image:
+      linear-gradient(rgba(196,163,90,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(196,163,90,0.035) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  /* Section bracket label — JetBrains Mono with bracket notation */
+  .circuit-label {
+    font-family: var(--font-jetbrains), monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(196,163,90,0.85);
+  }
+  .circuit-label::before { content: "[ "; }
+  .circuit-label::after  { content: " ]"; }
+
+  /* Technical readout text */
+  .tech-readout {
+    font-family: var(--font-jetbrains), monospace;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    color: rgba(196,163,90,0.4);
+    line-height: 1.85;
+  }
+
+  /* Circuit trace horizontal divider */
+  .circuit-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(196,163,90,0.5);
+    font-family: var(--font-jetbrains), monospace;
+    font-size: 8px;
+    letter-spacing: 0.15em;
+  }
+  .circuit-divider::before,
+  .circuit-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(196,163,90,0.2), transparent);
+  }
+
+  /* Vertical circuit trace (timeline) */
+  .circuit-line {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(196,163,90,0.3) 10%,
+      rgba(196,163,90,0.2) 50%,
+      rgba(196,163,90,0.3) 90%,
+      transparent 100%
+    );
+  }
+
+  /* Circuit node dot */
+  .circuit-node {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(196,163,90,0.2);
+    border: 2px solid rgba(196,163,90,0.7);
+    box-shadow: 0 0 8px rgba(196,163,90,0.3);
+  }
+  .circuit-node.active {
+    background: rgba(196,163,90,0.4);
+    box-shadow: 0 0 12px rgba(196,163,90,0.5);
+  }
+
+  /* 3D card perspective wrapper */
+  .perspective-card {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+
+  /* Tech tag chip */
+  .tech-tag {
+    font-family: var(--font-jetbrains), monospace;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: rgba(196,163,90,0.06);
+    border: 1px solid rgba(196,163,90,0.15);
+    color: rgba(196,163,90,0.75);
+    letter-spacing: 0.04em;
+  }
+  .dark .tech-tag {
+    background: rgba(196,163,90,0.07);
+    border-color: rgba(196,163,90,0.18);
+    color: rgba(196,163,90,0.7);
+  }
+
+  /* Teal tech tag variant */
+  .tech-tag-teal {
+    background: rgba(0,212,190,0.06);
+    border-color: rgba(0,212,190,0.2);
+    color: rgba(0,212,190,0.75);
   }
 }
 
@@ -121,7 +222,7 @@ body::before {
   inset: 0;
   z-index: 9990;
   pointer-events: none;
-  opacity: 0.03;
+  opacity: 0.025;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 200px 200px;
@@ -129,7 +230,7 @@ body::before {
 }
 
 .dark body::before {
-  opacity: 0.05;
+  opacity: 0.04;
   mix-blend-mode: screen;
 }
 
@@ -145,6 +246,14 @@ body::before {
 
 .ticker-track:hover {
   animation-play-state: paused;
+}
+
+/* ── Scan line animation ───────────────────── */
+@keyframes scanLine {
+  0%   { top: -2px; opacity: 0; }
+  5%   { opacity: 1; }
+  95%  { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
 }
 
 /* ── Reduced motion ────────────────────────── */
