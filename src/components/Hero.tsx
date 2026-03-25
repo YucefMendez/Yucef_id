@@ -96,8 +96,8 @@ export default function Hero() {
               transition={{ duration: 0.75, delay: 0.1 }}
               className="font-display font-extrabold tracking-tight leading-[0.95] mb-6"
             >
-              <span className="block text-[72px] md:text-[96px] xl:text-[112px] text-slate-100">Luis</span>
-              <span className="block text-[72px] md:text-[96px] xl:text-[112px] text-gradient">Mendez.</span>
+              <span className="block text-[60px] md:text-[84px] lg:text-[72px] xl:text-[88px] text-slate-100">Luis</span>
+              <span className="block text-[60px] md:text-[84px] lg:text-[72px] xl:text-[88px] text-gradient">Mendez.</span>
             </motion.h1>
 
             {/* Typewriter role */}

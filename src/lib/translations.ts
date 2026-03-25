@@ -39,6 +39,8 @@ export const translations = {
         { value: "5+", label: "Years in IT" },
         { value: "2", label: "Intl. Co-ops" },
         { value: "97%", label: "Model Accuracy" },
+        { value: "20 kV", label: "Peak Design Voltage" },
+        { value: "4", label: "Engineering Domains" },
       ],
       quote:
         "From 20 kV robotics drivers to AI trading models — I build systems that perform at the edge.",
@@ -189,6 +191,8 @@ export const translations = {
         { value: "5+", label: "Años en TI" },
         { value: "2", label: "Co-ops Intl." },
         { value: "97%", label: "Prec. del Modelo" },
+        { value: "20 kV", label: "Tensión de Diseño" },
+        { value: "4", label: "Dominios de Ingeniería" },
       ],
       quote:
         "De drivers robóticos de 20 kV a modelos de trading con IA — construyo sistemas que operan al límite.",
