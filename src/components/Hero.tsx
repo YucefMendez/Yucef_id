@@ -71,9 +71,42 @@ export default function Hero() {
       </div>
 
       <motion.div style={{ opacity: contentOpacity }} className="relative z-10 max-w-6xl mx-auto section-padding pt-32 pb-24">
-        <div className="flex flex-col lg:flex-row lg:items-center gap-14 lg:gap-20">
+        <div className="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-20">
 
-          {/* ── Left column ── */}
+          {/* ── Photo column — top on mobile, right on desktop ── */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+            className="order-first lg:order-last shrink-0 flex justify-center lg:justify-end"
+          >
+            <div className="relative p-3 lg:p-4">
+              {/* Corner brackets */}
+              <div className="absolute top-0 left-0 w-5 h-5 lg:w-6 lg:h-6 border-t-2 border-l-2 border-accent/70" />
+              <div className="absolute top-0 right-0 w-5 h-5 lg:w-6 lg:h-6 border-t-2 border-r-2 border-accent/70" />
+              <div className="absolute bottom-0 left-0 w-5 h-5 lg:w-6 lg:h-6 border-b-2 border-l-2 border-accent/70" />
+              <div className="absolute bottom-0 right-0 w-5 h-5 lg:w-6 lg:h-6 border-b-2 border-r-2 border-accent/70" />
+
+              {/* Photo */}
+              <div className="relative w-44 sm:w-52 lg:w-56 xl:w-64 aspect-[3/4] overflow-hidden">
+                <Image
+                  src="/profile.jpg"
+                  alt={siteConfig.name}
+                  fill
+                  className="object-cover object-top"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-warm-950/50 via-transparent to-transparent" />
+              </div>
+
+              {/* Label beneath photo */}
+              <div className="mt-2 lg:mt-3 text-center tech-readout">
+                <span>{siteConfig.fullName.toUpperCase()}</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* ── Left column: text ── */}
           <div className="flex-1 max-w-2xl">
 
             {/* Available badge */}
@@ -82,7 +115,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-sm border border-accent/25 bg-accent/5 text-xs font-jetbrains text-accent mb-10 tracking-wider"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-sm border border-accent/25 bg-accent/5 text-xs font-jetbrains text-accent mb-8 lg:mb-10 tracking-wider"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
                 {t.hero.available}
@@ -96,8 +129,8 @@ export default function Hero() {
               transition={{ duration: 0.75, delay: 0.1 }}
               className="font-display font-extrabold tracking-tight leading-[0.95] mb-6"
             >
-              <span className="block text-[60px] md:text-[84px] lg:text-[72px] xl:text-[88px] text-slate-100">Luis</span>
-              <span className="block text-[60px] md:text-[84px] lg:text-[72px] xl:text-[88px] text-gradient">Mendez.</span>
+              <span className="block text-[52px] sm:text-[68px] md:text-[84px] lg:text-[72px] xl:text-[88px] text-slate-100">Luis</span>
+              <span className="block text-[52px] sm:text-[68px] md:text-[84px] lg:text-[72px] xl:text-[88px] text-gradient">Mendez.</span>
             </motion.h1>
 
             {/* Typewriter role */}
@@ -153,39 +186,6 @@ export default function Hero() {
             </motion.div>
 
           </div>
-
-          {/* ── Right column: photo in engineering frame ── */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, delay: 0.35 }}
-            className="hidden lg:block shrink-0"
-          >
-            <div className="relative p-4">
-              {/* Corner brackets */}
-              <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-accent/70" />
-              <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-accent/70" />
-              <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-accent/70" />
-              <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-accent/70" />
-
-              {/* Photo */}
-              <div className="relative w-56 xl:w-64 aspect-[3/4] overflow-hidden">
-                <Image
-                  src="/profile.jpg"
-                  alt={siteConfig.name}
-                  fill
-                  className="object-cover object-top"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-warm-950/50 via-transparent to-transparent" />
-              </div>
-
-              {/* Label beneath photo */}
-              <div className="mt-3 text-center tech-readout">
-                <span>{siteConfig.fullName.toUpperCase()}</span>
-              </div>
-            </div>
-          </motion.div>
 
         </div>
       </motion.div>

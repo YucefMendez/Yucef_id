@@ -17,10 +17,22 @@ const config: Config = {
           700: "#28231C",
           600: "#352D24",
         },
+        // Caramel accent — derived from light brown skin & cream suit palette
         accent: {
-          DEFAULT: "#C4A35A",
-          dark: "#A0813A",
-          muted: "rgba(196,163,90,0.15)",
+          DEFAULT: "#C09060",
+          dark: "#906840",
+          muted: "rgba(192,144,96,0.15)",
+        },
+        // Cream reference — suit tone
+        cream: {
+          DEFAULT: "#E8DCC8",
+          light: "#F4EEE4",
+          dark: "#C8B898",
+        },
+        // Espresso — black shirt/hair reference
+        espresso: {
+          DEFAULT: "#1A1208",
+          light: "#2A2018",
         },
         teal: {
           DEFAULT: "#00D4BE",
