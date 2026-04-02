@@ -114,7 +114,7 @@ export default function Hero() {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.7, ease: "easeInOut" }}
                 className="inline-flex items-center gap-2 px-4 py-1.5 rounded-sm border border-accent/25 bg-accent/5 text-xs font-jetbrains text-accent mb-8 lg:mb-10 tracking-wider"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />

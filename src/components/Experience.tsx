@@ -6,7 +6,7 @@ import { useLang } from "@/context/LanguageContext";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 18 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeInOut" } },
 };
 const stagger = {
   hidden: {},
@@ -164,7 +164,7 @@ export default function Experience() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.7, delay: 0.3, ease: "easeInOut" }}
               className="mt-8 glass rounded-sm p-5 flex items-center justify-between gap-4"
             >
               <div>
